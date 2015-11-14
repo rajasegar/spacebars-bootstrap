@@ -1,0 +1,49 @@
+<template name="_btn_group">
+  <div class="btn-group btn-group-{{size}}" role="group" aria-label="...">
+    {{> Template.contentBlock }}
+  </div>
+</template>
+
+<template name="btn_group_vertical">
+  <div class="btn-group-vertical" role="group" aria-label="...">
+    {{> Template.contentBlock }}
+  </div>
+</template>
+
+<template name="btn_group_justified">
+  <div class="btn-group btn-group-justified" role="group" aria-label="...">
+    {{> Template.contentBlock }}
+  </div>
+</template>
+
+<template name="btn_toolbar">
+  <div class="btn-toolbar" role="toolbar" aria-label="...">
+    {{> Template.contentBlock}}
+  </div>
+</template>
+
+<template name="btn_group">
+  {{#_btn_group}}
+    {{> Template.contentBlock }}
+  {{/_btn_group}}
+</template>
+
+
+<template name="btn_group_lg">
+  {{#_btn_group size="lg"}}
+    {{> Template.contentBlock }}
+  {{/_btn_group}}
+</template>
+
+
+<template name="btn_group_sm">
+  {{#_btn_group size="sm"}}
+    {{> Template.contentBlock }}
+  {{/_btn_group}}
+</template>
+
+<template name="btn_group_xs">
+  {{#_btn_group size="xs"}}
+    {{> Template.contentBlock }}
+  {{/_btn_group}}
+</template>

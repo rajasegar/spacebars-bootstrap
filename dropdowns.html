@@ -1,0 +1,36 @@
+<template name="_dropdown">
+  <div class="drop{{type}}">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdown{{title}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    {{title}}
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown{{title}}">
+    {{> Template.contentBlock }}
+  </ul>
+</div>
+</template>
+
+
+<template name="dropdown">
+  {{#_dropdown type="down" title=title}}
+    {{> Template.contentBlock}}
+  {{/_dropdown}}
+</template>
+
+<template name="dropdown_link">
+  <li class="{{disabled}}"><a href={{url}}>{{caption}}</a></li>
+</template>
+
+<template name="dropdown_header">
+  <li class="dropdown-header">{{title}}</li>
+</template>
+
+<template name="separator">
+  <li role="separator" class="divider"></li>
+</template>
+
+<template name="dropup">
+  {{#_dropdown type="up" title=title}}
+    {{> Template.contentBlock}}
+  {{/_dropdown}}
+</template>

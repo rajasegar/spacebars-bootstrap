@@ -1,0 +1,29 @@
+<template name="tabs">
+  <div>
+    {{> Template.contentBlock}}
+  </div>
+</template>
+
+<template name="nav_tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    {{> Template.contentBlock }}
+  </ul>
+</template>
+
+<template name="tab_link">
+  <li role="presentation" class="{{active}}">
+    <a href="{{url}}" aria-controls="{{title}}" role="tab" data-toggle="tab">{{title}}</a>
+  </li>
+</template>
+
+<template name="tab_content">
+  <div class="tab-content">
+    {{> Template.contentBlock}}
+  </div>
+</template>
+
+<template name="tab_panel">
+  <div role="tabpanel" class="tab-pane {{active}}" id="{{id}}">
+    {{> Template.contentBlock}}
+  </div>
+</template>

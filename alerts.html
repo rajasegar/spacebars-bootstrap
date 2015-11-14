@@ -1,0 +1,171 @@
+<!-- alerts.jade -->
+<!-- alert templates -->
+
+<!-- Generic Simple alert -->
+<template name="alert">
+	<div class="alert alert-{{type}}" role="alert">
+		{{> Template.contentBlock }}
+  </div>
+</template>
+
+
+<!-- Generic alert with icon -->
+<template name="alert_i">
+	<div class="alert alert-{{type}}" role="alert">
+    {{>icon name=icon}}
+    &nbsp;
+		{{> Template.contentBlock }}
+  </div>
+</template>
+
+
+<!-- Generic alert with close button -->
+<template name="alert_x">
+	<div class="alert alert-{{type}} alert-dismissible" role="alert">
+		<button class="close" type="button" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+    </button>
+		{{> Template.contentBlock }}
+  </div>
+</template>
+
+<!-- Generic alert with icon and close button -->
+<template name="alert_ix">
+	<div class="alert alert-{{type}} alert-dismissible" role="alert">
+		{{>icon name=icon}}
+		&nbsp;
+		<button class="close" type="button" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">  &times;</span>
+    </button>
+		{{> Template.contentBlock }}
+  </div>
+</template>
+
+<!-- ALERTS -->
+
+<!-- Alert info -->
+<template name="alert_info">
+	{{#alert type="info"}}
+    {{> Template.contentBlock}}
+  {{/alert}}
+</template>
+
+<!-- Alert success -->
+<template name="alert_success">
+	{{#alert type="success"}}
+    {{> Template.contentBlock }}
+  {{/alert}}
+</template>
+
+<!-- Alert warning -->
+<template name="alert_warning">
+	{{#alert type="warning"}}
+    {{> Template.contentBlock }}
+  {{/alert}}
+</template>
+
+<!-- Alert danger -->
+<template name="alert_danger">
+	{{#alert type="danger"}}
+    {{> Template.contentBlock }}
+  {{/alert}}
+</template>
+
+
+<!-- ALERTS WITH ICONS -->
+
+<!-- Alert info -->
+<template name="alert_i_info">
+	{{#alert_i type="info" icon=icon}}
+		{{> Template.contentBlock}}
+	{{/alert_i}}
+</template>
+
+
+
+<!-- Alert success -->
+<template name="alert_i_success">
+	{{#alert_i type="success" icon=icon}}
+		{{> Template.contentBlock}}
+	{{/alert_i}}
+</template>
+
+
+<!-- Alert warning -->
+<template name="alert_i_warning">
+	{{#alert_i type="warning" icon=icon}}
+		{{> Template.contentBlock}}
+	{{/alert_i}}
+</template>
+
+<!-- Alert danger -->
+<template name="alert_i_danger">
+	{{#alert_i type="danger" icon=icon}}
+		{{> Template.contentBlock}}
+	{{/alert_i}}
+</template>
+
+
+
+<!-- DISMISSIBLE ALERTS -->
+
+<!-- Alert info -->
+<template name="alert_x_info">
+	{{#alert_x type="info"}}
+		{{> Template.contentBlock }}
+	{{/alert_x}}
+</template>
+
+
+<!-- Alert success -->
+<template name="alert_x_success">
+	{{#alert_x type="success"}}
+		{{> Template.contentBlock }}
+	{{/alert_x}}
+</template>
+
+<!-- Alert warning -->
+<template name="alert_x_warning">
+	{{#alert_x type="warning"}}
+		{{> Template.contentBlock }}
+	{{/alert_x}}
+</template>
+
+<!-- Alert danger -->
+<template name="alert_x_danger">
+	{{#alert_x type="danger"}}
+		{{> Template.contentBlock }}
+	{{/alert_x}}
+</template>
+
+
+
+<!-- DISMISSIBLE ALERTS WITH ICONS -->
+<!-- Alert info -->
+<template name="alert_ix_info">
+	{{#alert_ix type="info" icon=icon}}
+		{{> Template.contentBlock }}
+	{{/alert_ix}}
+</template>
+
+
+<!-- Alert success -->
+<template name="alert_ix_success">
+	{{#alert_ix type="success" icon=icon}}
+		{{> Template.contentBlock }}
+	{{/alert_ix}}
+</template>
+
+<!-- Alert warning -->
+<template name="alert_ix_warning">
+	{{#alert_ix type="warning" icon=icon}}
+		{{> Template.contentBlock }}
+	{{/alert_ix}}
+</template>
+
+<!-- Alert danger -->
+<template name="alert_ix_danger">
+	{{#alert_ix type="danger" icon=icon}}
+		{{> Template.contentBlock }}
+	{{/alert_ix}}
+</template>
