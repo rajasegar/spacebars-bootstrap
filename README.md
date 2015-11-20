@@ -7,6 +7,7 @@
 ### Usage ###
 
 # Alerts
+```bash
 <h2>Alerts</h2>
 {{#alert type="info"}} this is an info alert {{/alert}}
 {{#alert type="warning"}} this is an warning alert {{/alert}}

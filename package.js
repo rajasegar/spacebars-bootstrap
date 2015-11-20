@@ -1,6 +1,6 @@
 Package.describe({
   name: 'rajasegar:spacebars-bootstrap',
-  version: '0.0.7',
+  version: '0.0.8',
   // Brief, one-line summary of the package.
   summary: 'Bootstrap components written in Spacebars',
   // URL to the Git repository containing the source code for this package.
@@ -27,7 +27,10 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
-  api.use('tinytest');
+  api.use('templating');
+  api.use('sanjo:jasmine@0.20.2');
+  api.use('velocity:console-reporter@0.1.4');
   api.use('rajasegar:spacebars-bootstrap');
   api.addFiles('spacebars-bootstrap-tests.js');
+  api.addFiles('tests/client/buttons-spec.js');
 });
