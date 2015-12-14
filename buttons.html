@@ -1,5 +1,34 @@
 <template name="btn">
-  <button class="btn btn-{{type}}" id="{{id}}" >
+  <button class="btn btn-{{type}} {{size}}" id="{{id}}" >
     {{> Template.contentBlock }}
   </button>
+</template>
+
+<template name="btn_lg">
+  {{#btn type=type id=id size="lg"}}
+    {{> Template.contentBlock }}
+  {{/btn}}
+</template>
+
+<template name="btn_sm">
+  {{#btn type=type id=id size="sm"}}
+    {{> Template.contentBlock }}
+  {{/btn}}
+</template>
+
+<template name="btn_xs">
+  {{#btn type=type id=id size="xs"}}
+    {{> Template.contentBlock }}
+  {{/btn}}
+</template>
+
+
+<template name="a_btn">
+  <a class="btn btn-{{type}}" href="{{url}}" role="button">
+    {{> Template.contentBlock}}
+  </a>
+</template>
+
+<template name="input_btn">
+  <input class="btn btn-{{type}}" type="button" value="{{value}}">
 </template>

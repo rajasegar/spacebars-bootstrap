@@ -1,0 +1,84 @@
+<!-- accordion -->
+<!-- USAGE: {{#accordion id="abcd"}} -->
+<template name="accordion">
+  <div class="panel-group"  id="accordion{{id}}" role="tablist" aria-multiselectable="true">
+    {{#with parent_id}}
+      {{> Template.contentBlock }}
+    {{/with}}
+  </div>
+</template>
+
+<!-- accordion-item -->
+<!-- USAGE: +accordion_item(type="" title="" parent="" expanded="") -->
+<template name="accordion_item">
+  <div class="panel panel-{{type}}">
+    <div class="panel-heading" role="tab" id="heading{{accordion_id}}">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion{{accordion_id}}" href="{{collapse_link}}" aria-expanded="true" aria-controls="collapseOne">
+          {{ title }}
+        </a>
+      </h4>
+    </div>
+    <div class="panel-collapse collapse {{collapse_in}}" id="collapse{{title}}" role="tabpanel" aria-labelledby="heading{{title}}">
+      <div class="panel-body">
+        {{ parent_id }}
+        {{> Template.contentBlock }}
+      </div>
+    </div>
+  </div>
+</template>
+
+<!-- accordion-item-default -->
+<!-- USAGE: +accordion_item_default(title="" parent="" expanded="") -->
+<template name="accordion_item_default">
+  {{#accordion_item type="default" title=title parent=parent expanded=expanded}}
+    {{> Template.contentBlock }}
+  {{/accordion_item}}
+</template>
+
+<!-- accordion-item-primary -->
+<template name="accordion_item_primary">
+  {{#accordion_item type="primary" title=title parent=parent expanded=expanded}}
+    {{> Template.contentBlock }}
+  {{/accordion_item}}
+</template>
+
+<!-- accordion-item-info -->
+<template name="accordion_item_info">
+  {{#accordion_item type="info" title=title parent=parent expanded=expanded}}
+    {{> Template.contentBlock }}
+  {{/accordion_item}}
+</template>
+
+<!-- accordion-item-success -->
+<template name="accordion_item_success">
+  {{#accordion_item type="success" title=title parent=parent expanded=expanded}}
+    {{> Template.contentBlock }}
+  {{/accordion_item}}
+</template>
+
+<!-- accordion-item-warning -->
+<template name="accordion_item_warning">
+  {{#accordion_item type="warning" title=title parent=parent expanded=expanded}}
+    {{> Template.contentBlock }}
+  {{/accordion_item}}
+</template>
+
+<!-- accordion-item-danger -->
+<template name="accordion_item_danger">
+  {{#accordion_item type="danger" title=title parent=parent expanded=expanded}}
+    {{> Template.contentBlock }}
+  {{/accordion_item}}
+</template>
+
+<template name="collapse_link">
+  <a class="btn btn-{{type}}" role="button" data-toggle="collapse" href="#{{target}}" aria-expanded="false" aria-controls="{{target}}">
+    {{> Template.contentBlock}}
+  </a>
+</template>
+
+<template name="collapse_btn">
+  <button class="btn btn-{{type}}" type="button" data-toggle="collapse" data-target="#{{target}}" aria-expanded="false" aria-controls="{{target}}">
+    {{> Template.contentBlock}}
+  </button>
+</template>

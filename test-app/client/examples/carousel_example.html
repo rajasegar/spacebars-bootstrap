@@ -1,0 +1,28 @@
+<template name="carousel_example">
+  <h2>Carousel</h2>
+  {{#carousel id="myCarousel"}}
+    {{#carousel_item parent="myCarousel" active="active" image="/carousel1.jpg"}}
+      {{#carousel_caption}} This is carousel caption 1 {{/carousel_caption}}
+    {{/carousel_item}}
+    {{#carousel_item parent="myCarousel"  image="/carousel2.jpg"}}
+      {{#carousel_caption}} This is carousel caption 2 {{/carousel_caption}}
+    {{/carousel_item}}
+    {{#carousel_item parent="myCarousel"  image="/carousel3.jpg"}}
+      {{#carousel_caption}} This is carousel caption 3 {{/carousel_caption}}
+    {{/carousel_item}}
+  {{/carousel}}
+  <h2>Another Carousel</h2>
+  <div class="col-md-9">
+    {{#carousel id="myCarousel2"}}
+      {{#carousel_item parent="myCarousel2" active="active" image="/slide1.jpg"}}
+        {{#carousel_caption}} This is carousel caption 1 {{/carousel_caption}}
+      {{/carousel_item}}
+      {{#carousel_item parent="myCarousel2"  image="/slide2.jpg"}}
+        {{#carousel_caption}} This is carousel caption 2 {{/carousel_caption}}
+      {{/carousel_item}}
+      {{#carousel_item parent="myCarousel2"  image="/slide3.jpg"}}
+        {{#carousel_caption}} This is carousel caption 3 {{/carousel_caption}}
+      {{/carousel_item}}
+    {{/carousel}}
+  </div>
+</template>

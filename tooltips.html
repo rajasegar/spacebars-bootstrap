@@ -1,0 +1,32 @@
+<template name="tooltip">
+  <a href="#" data-toggle="tooltip" title="{{title}}" data-placement="{{placement }}">
+    {{> Template.contentBlock }}
+  </a>
+</template>
+
+<template name="tooltip_left">
+  {{#tooltip title=title placement="left"}}
+    {{> Template.contentBlock }}
+  {{/tooltip}}
+</template>
+
+
+<template name="tooltip_right">
+  {{#tooltip title=title placement="right"}}
+    {{> Template.contentBlock }}
+  {{/tooltip}}
+</template>
+
+
+<template name="tooltip_top">
+  {{#tooltip title=title placement="top"}}
+    {{> Template.contentBlock }}
+  {{/tooltip}}
+</template>
+
+
+<template name="tooltip_bottom">
+  {{#tooltip title=title placement="bottom"}}
+    {{> Template.contentBlock }}
+  {{/tooltip}}
+</template>

@@ -1,0 +1,30 @@
+<template name="button_example">
+  <h1>Buttons</h1>
+  <h2>Link Buttons</h2>
+  {{#a_btn url="#"}} Default Link Button {{/a_btn}}
+  {{#a_btn type="primary" url="#"}} Primary Link Button {{/a_btn}}
+  {{#a_btn type="warning" url="#"}} Warning Link Button {{/a_btn}}
+  {{#a_btn type="danger" url="#"}} Danger Link Button {{/a_btn}}
+  {{#a_btn type="success" url="#"}} Success Link Button {{/a_btn}}
+  {{#a_btn type="info" url="#"}} Info Link Button {{/a_btn}}
+  <h2>Buttons</h2>
+  {{#btn type="info" id="btnInfo" }} Info Button {{/btn}}
+  <br/> {{#btn type="primary"}} Primary Button {{/btn}}
+  <br/> {{#btn type="success"}} Success Button {{/btn}}
+  <br/> {{#btn type="warning"}} Warning Button {{/btn}}
+  <br/> {{#btn type="danger"}} Danger Button {{/btn}}
+  <br/> {{#btn }} Default Button {{/btn}}
+  <br/>
+  <h2>Large Buttons</h2>
+  {{#btn_lg id="btnLarge"}} Large Default Button {{/btn_lg}}
+  {{#btn_lg type="primary" }} Large Primary Button {{/btn_lg}}
+  <h2>Small Buttons</h2>
+  {{#btn_sm id="btnSmall"}} Small Default Button {{/btn_sm}}
+  {{#btn_sm type="primary" }} Small Primary Button {{/btn_sm}}
+  <h2>Extra Small Buttons</h2>
+  {{#btn_xs id="btnXS"}} Extra Small Default Button {{/btn_xs}}
+  {{#btn_xs type="primary" }} Extra Small Primary Button {{/btn_xs}}
+  <h2>Input Buttons</h2>
+  {{>input_btn value="Default Input Button"}}
+  {{>input_btn type="primary" value="Primary Input Button"}}
+</template>

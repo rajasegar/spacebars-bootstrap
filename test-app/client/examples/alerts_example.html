@@ -1,0 +1,43 @@
+<template name="alerts_example">
+  <h2>Alerts</h2>
+  {{#alert type="info"}} this is an info alert {{/alert}}
+  {{#alert type="warning"}} this is an warning alert {{/alert}}
+  {{#alert type="danger"}} this is an danger alert {{/alert}}
+  {{#alert type="success"}} this is an success alert {{/alert}}
+  <h2>Alerts - Custom</h2>
+  {{#alert_info}} This is an Info alert {{/alert_info}}
+  {{#alert_warning}} this is a <a href="#">warning</a> alert {{/alert_warning}}
+  {{#alert_success}} This is a <strong>Success</strong> alert {{/alert_success}}
+  {{#alert_danger}} This is a danger alert {{/alert_danger}}
+
+  <h2>Alerts with Icons</h2>
+  {{#alert_i type="danger" icon="remove"}} this is a danger alert with icon {{/alert_i}}
+  {{#alert_i type="success" icon="ok"}} this is an info alert {{/alert_i}}
+  {{#alert_i type="info" icon="info-sign"}} this is an info alert {{/alert_i}}
+  {{#alert_i type="warning" icon="warning-sign"}} This is a warning alert with icon {{/alert_i}}
+  <h2>Dismissible Alerts</h2>
+  {{#alert_x type="warning"}} this is an info alert {{/alert_x}}
+  {{#alert_x type="info"}} This is an info alert {{/alert_x}}
+  {{#alert_x type="success"}} This is a success alert with close button {{/alert_x}}
+  {{#alert_x type="danger"}} This is a danger alert with close button {{/alert_x}}
+
+  <h2>Dismissible Alerts - Custom</h2>
+  {{#alert_x_warning}} this is an warning alert with close button {{/alert_x_warning}}
+  {{#alert_x_info}} This is an info alert with close button {{/alert_x_info}}
+  {{#alert_x_success}} This is a success alert with close button {{/alert_x_success}}
+  {{#alert_x_danger}} This is a danger alert with close button {{/alert_x_danger}}
+
+
+  <h2>Dismissible Alerts with Icons</h2>
+  {{#alert_ix type="danger" icon="remove"}} This is a danger alert with icon and close button {{/alert_ix}}
+  {{#alert_ix type="warning" icon="warning-sign"}} This is a warning alert with icon and close button {{/alert_ix}}
+  {{#alert_ix type="success" icon="ok"}} This is a success alert with icon and close button {{/alert_ix}}
+  {{#alert_ix type="info" icon="info-sign"}} This is a info alert with icon and close button {{/alert_ix}}
+
+  <h2>Dismissible Alerts with Icons - Custom</h2>
+  {{#alert_ix_danger icon="remove"}} This is a danger alert with icon and close button {{/alert_ix_danger}}
+  {{#alert_ix_warning icon="warning-sign"}} This is a warning alert with icon and close button {{/alert_ix_warning}}
+  {{#alert_ix_success icon="ok"}} This is a success alert with icon and close button {{/alert_ix_success}}
+  {{#alert_ix_info icon="info-sign"}} This is a info alert with icon and close button {{/alert_ix_info}}
+
+</template>

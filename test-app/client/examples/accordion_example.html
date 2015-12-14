@@ -1,0 +1,24 @@
+<template name="accordion_example">
+  <h1> Collapse link</h1>
+  <p>
+    {{#collapse_link  target="collapseExample"}} Link with href {{/collapse_link}}
+    {{#collapse_btn target="collapseExample"}} Button with data-target {{/collapse_btn}}
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="well">
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+    </div>
+  </div>
+  <h1>Accordion</h1>
+  {{#accordion id="myAccordion"}}
+    {{#accordion_item  accordion_id="myAccordion" title="First" open=true}}
+      <h1>First Accordion content</h1>
+    {{/accordion_item}}
+    {{#accordion_item type="primary" accordion_id="myAccordion" title="Second"}}
+      <h1>First Accordion content</h1>
+    {{/accordion_item}}
+    {{#accordion_item type="primary" accordion_id="myAccordion" title="Third"}}
+      <h1>First Accordion content</h1>
+    {{/accordion_item}}
+  {{/accordion}}
+</template>

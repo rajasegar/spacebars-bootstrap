@@ -1,0 +1,11 @@
+<template name="input_group">
+  <div class="input-group">
+    {{#if prepend}}
+      <span class="input-group-addon" id="basic-addon1">{{prepend}}</span>
+    {{/if}}
+    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+    {{#if append}}
+      <span class="input-group-addon" id="basic-addon2">{{append}}</span>
+    {{/if}}
+  </div>
+</template>

@@ -1,3 +1,26 @@
 <template name="icon">
-  <i class="glyphicon glyphicon-{{name}}"></i>
+  <i class="glyphicon glyphicon-{{name}} {{type}}"></i>
+</template>
+
+<template name="icon_primary">
+  {{> icon name=name type="primary"}}
+</template>
+
+<template name="icon_success">
+  {{> icon name=name type="success"}}
+</template>
+
+
+<template name="icon_warning">
+  {{> icon name=name type="warning"}}
+</template>
+
+
+<template name="icon_danger">
+  {{> icon name=name type="danger"}}
+</template>
+
+
+<template name="icon_info">
+  {{> icon name=name type="info"}}
 </template>

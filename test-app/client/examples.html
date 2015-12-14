@@ -1,0 +1,181 @@
+
+<template name="tab_example">
+  {{#tabset}} {{#tab name="Home"}}
+  <h3>Home</h3>
+  <p>Home tab</p>
+  {{/tab}} {{#tab name="Profile"}}
+  <h3>Profile</h3>
+  <p>Profile tab</p>
+  {{/tab}} {{#tab name="Settings"}}
+  <h3>Settings</h3>
+  <p>Settings tab</p>
+  {{/tab}} {{/tabset}}
+</template>
+
+
+
+<template name="panels_example">
+  {{#panel type="default" title="Heading"}}
+  <p> This is panel content</p>
+  {{/panel}}
+  <br/> {{#panel type="primary" title="Heading"}}
+  <p> This is panel content</p>
+  {{/panel}}
+  <br/> {{#panel type="info" title="Heading"}}
+  <p> This is panel content</p>
+  {{/panel}}
+  <br/> {{#panel type="warning" title="Heading"}}
+  <p> This is panel content</p>
+  {{/panel}}
+  <br/> {{#panel type="danger" title="Heading"}}
+  <p> This is panel content</p>
+  {{/panel}}
+  <br/> {{#panel type="success" title="Heading"}}
+  <p> This is panel content</p>
+  {{/panel}}
+  <br/>
+</template>
+
+<template name="dropdown_examples">
+  {{#dropdown title="MyDropdown"}} {{> dropdown_header title="Fruits"}} {{> dropdown_link url="/apple" caption="Apple" disabled="disabled"}} {{> dropdown_link url="/orange" caption="Orange"}} {{> separator}} {{> dropdown_link url="/grapes" caption="Grapes"}}
+  {{/dropdown}}
+  <br/> {{#dropup title="Animals"}} {{> dropdown_link url="/dogs" caption="Dogs"}} {{> dropdown_link url="/cats" caption="Cats"}} {{> dropdown_link url="/horses" caption="Horses"}} {{/dropup}}
+</template>
+
+
+<template name="buttongroup_examples">
+  {{#btn_group}}
+  <button type="button" class="btn btn-default">Left</button>
+  <button type="button" class="btn btn-default">Middle</button>
+  <button type="button" class="btn btn-default">Right</button>
+  {{/btn_group}}
+
+  <br/>
+  <br/> {{#btn_group_lg}}
+  <button type="button" class="btn btn-default">Left</button>
+  <button type="button" class="btn btn-default">Middle</button>
+  <button type="button" class="btn btn-default">Right</button>
+  {{/btn_group_lg}}
+
+  <br/>
+  <br/> {{#btn_group_sm}}
+  <button type="button" class="btn btn-default">Left</button>
+  <button type="button" class="btn btn-default">Middle</button>
+  <button type="button" class="btn btn-default">Right</button>
+  {{/btn_group_sm}}
+
+  <br/>
+  <br/> {{#btn_group_xs}}
+  <button type="button" class="btn btn-default">Left</button>
+  <button type="button" class="btn btn-default">Middle</button>
+  <button type="button" class="btn btn-default">Right</button>
+  {{/btn_group_xs}}
+
+  <br/>
+  <br/>
+  <h2>Nesting</h2>
+  {{#btn_group}}
+    <button type="button" class="btn btn-default">1</button>
+    <button type="button" class="btn btn-default">2</button>
+
+    {{#btn_group}}
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Dropdown link</a></li>
+        <li><a href="#">Dropdown link</a></li>
+      </ul>
+    {{/btn_group}}
+  {{/btn_group}}
+
+  <h2>Button Toolbar</h2>
+
+  {{#btn_toolbar}} {{#btn_group}}
+  <button type="button" class="btn btn-default">1</button>
+  <button type="button" class="btn btn-default">2</button>
+  <button type="button" class="btn btn-default">3</button>
+  {{/btn_group}} {{#btn_group}}
+  <button type="button" class="btn btn-default">4</button>
+  <button type="button" class="btn btn-default">5</button>
+  <button type="button" class="btn btn-default">6</button>
+  {{/btn_group}} {{/btn_toolbar}}
+
+  <h3>Vertical Button group</h3>
+  {{#btn_group_vertical}}
+    <button type="button" class="btn btn-default">Left</button>
+    <button type="button" class="btn btn-default">Middle</button>
+    <button type="button" class="btn btn-default">Right</button>
+  {{/btn_group_vertical}}
+
+  <h3>Justified button groups</h3>
+  <h4> With &lt;a&gt; elements</h4>
+  {{#btn_group_justified}}
+    <a href="#" class="btn btn-default" role="button">Left</a>
+    <a href="#" class="btn btn-default" role="button">Middle</a>
+    <a href="#" class="btn btn-default" role="button">Right</a>
+  {{/btn_group_justified}}
+  <h4> With &lt;button&gt; elements</h4>
+  {{#btn_group_justified}}
+    {{#btn_group}}<button type="button" class="btn btn-default">Left</button>{{/btn_group}}
+    {{#btn_group}}<button type="button" class="btn btn-default">Middle</button>{{/btn_group}}
+    {{#btn_group}}<button type="button" class="btn btn-default">Right</button>{{/btn_group}}
+
+  {{/btn_group_justified}}
+
+
+</template>
+
+<template name="buttondropdown_examples">
+  <h3>Single button dropdowns</h3>
+  <!-- Single button -->
+  {{#btn_group}}
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Action
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Action</a></li>
+      <li><a href="#">Another action</a></li>
+      <li><a href="#">Something else here</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="#">Separated link</a></li>
+    </ul>
+  {{/btn_group}}
+</template>
+
+
+<template name="tabs_example">
+  <h3>Tabs</h3>
+  {{#tabs}}
+    <!-- Nav tabs -->
+    {{#nav_tabs}}
+      {{> tab_link active="active" url="#home" title="Home"}}
+      {{> tab_link url="#profile" title="Profile"}}
+      {{> tab_link url="#messages" title="Messages"}}
+      {{> tab_link url="#settings" title="Settings"}}
+    {{/nav_tabs}}
+
+    <!-- Tab panes -->
+    {{#tab_content}}
+      {{#tab_panel active="active" id="home"}}
+        <h1>This home content</h1>
+      {{/tab_panel}}
+
+      {{#tab_panel id="profile"}}
+        <h1>This profile content</h1>
+      {{/tab_panel}}
+
+      {{#tab_panel id="messages"}}
+        <h1>This is messages content</h1>
+      {{/tab_panel}}
+
+      {{#tab_panel id="settings"}}
+        <h1>This is settings tab content</h1>
+      {{/tab_panel}}
+
+    {{/tab_content}}
+  {{/tabs}}
+
+</template>

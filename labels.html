@@ -1,0 +1,38 @@
+<template name="label">
+  <span class="label label-{{type}}">{{> Template.contentBlock }}</span>
+</template>
+
+
+<template name="label_primary">
+  {{#label type="primary"}}
+    {{> Template.contentBlock }}
+  {{/label}}
+</template>
+
+
+<template name="label_success">
+  {{#label type="success"}}
+    {{> Template.contentBlock }}
+  {{/label}}
+</template>
+
+
+<template name="label_warning">
+  {{#label type="warning"}}
+    {{> Template.contentBlock }}
+  {{/label}}
+</template>
+
+
+<template name="label_info">
+  {{#label type="info"}}
+    {{> Template.contentBlock }}
+  {{/label}}
+</template>
+
+
+<template name="label_danger">
+  {{#label type="danger"}}
+    {{> Template.contentBlock }}
+  {{/label}}
+</template>
